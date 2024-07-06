@@ -69,7 +69,7 @@ const App = () => {
 
   const sendOtp = async (phoneNumber) => {
     try {
-      const response = await fetch('https://India-otp-project-bcef9.cloudfunctions.net/sendOtp', {
+      const response = await fetch('https://otp-project-bcef9.cloudfunctions.net/sendOtp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
