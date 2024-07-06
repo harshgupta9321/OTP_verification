@@ -67,6 +67,27 @@ const App = () => {
       });
   }
 
+  const sendOtp = async (phoneNumber) => {
+    try {
+      const response = await fetch('https://India-otp-project-bcef9.cloudfunctions.net/sendOtp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ phoneNumber }),
+      });
+  
+      if (response.ok) {
+        console.log('OTP sent successfully');
+      } else {
+        console.error('Error sending OTP:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error sending OTP:', error);
+    }
+  };
+  
+
   return (
     <section className="bg-emerald-500 flex items-center justify-center h-screen">
       <div>

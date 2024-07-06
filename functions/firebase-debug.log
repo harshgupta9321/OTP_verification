@@ -1,0 +1,64 @@
+[debug] [2024-07-06T14:43:51.154Z] ----------------------------------------------------------------------
+[debug] [2024-07-06T14:43:51.158Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\harsh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2024-07-06T14:43:51.159Z] CLI Version:   13.13.0
+[debug] [2024-07-06T14:43:51.160Z] Platform:      win32
+[debug] [2024-07-06T14:43:51.160Z] Node Version:  v18.16.0
+[debug] [2024-07-06T14:43:51.162Z] Time:          Sat Jul 06 2024 20:13:51 GMT+0530 (India Standard Time)
+[debug] [2024-07-06T14:43:51.162Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-06T14:43:51.313Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-06T14:43:51.315Z] > authorizing via signed-in user (harshgupta18022003@gmail.com)
+[debug] [2024-07-06T14:43:51.315Z] [iam] checking project otp-project-bcef9 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-07-06T14:43:51.321Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/otp-project-bcef9:testIamPermissions [none]
+[debug] [2024-07-06T14:43:51.321Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/otp-project-bcef9:testIamPermissions x-goog-quota-user=projects/otp-project-bcef9
+[debug] [2024-07-06T14:43:51.322Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/otp-project-bcef9:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-07-06T14:43:53.093Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/otp-project-bcef9:testIamPermissions 200
+[debug] [2024-07-06T14:43:53.094Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/otp-project-bcef9:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-07-06T14:43:53.095Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/otp-project-bcef9/serviceAccounts/otp-project-bcef9@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-07-06T14:43:53.095Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/otp-project-bcef9/serviceAccounts/otp-project-bcef9@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-07-06T14:43:55.229Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/otp-project-bcef9/serviceAccounts/otp-project-bcef9@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-07-06T14:43:55.229Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/otp-project-bcef9/serviceAccounts/otp-project-bcef9@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'otp-project-bcef9'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-07-06T14:43:55.237Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/otp-project-bcef9 [none]
+[debug] [2024-07-06T14:43:55.926Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/otp-project-bcef9 200
+[debug] [2024-07-06T14:43:55.927Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/otp-project-bcef9 {"projectId":"otp-project-bcef9","projectNumber":"648714752959","displayName":"otp-project","name":"projects/otp-project-bcef9","resources":{"hostingSite":"otp-project-bcef9"},"state":"ACTIVE","etag":"1_1f848339-0ced-4c20-9ee2-31f4cf0f3ec7"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-07-06T14:43:55.932Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-07-06T14:43:55.932Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/otp-project-bcef9
+[debug] [2024-07-06T14:43:55.935Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-07-06T14:43:55.935Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/otp-project-bcef9
+[debug] [2024-07-06T14:43:55.937Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/cloudbuild.googleapis.com [none]
+[debug] [2024-07-06T14:43:55.937Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/cloudbuild.googleapis.com x-goog-quota-user=projects/otp-project-bcef9
+[debug] [2024-07-06T14:43:55.938Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/artifactregistry.googleapis.com [none]
+[debug] [2024-07-06T14:43:55.938Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/artifactregistry.googleapis.com x-goog-quota-user=projects/otp-project-bcef9
+[debug] [2024-07-06T14:43:57.846Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/artifactregistry.googleapis.com 200
+[debug] [2024-07-06T14:43:57.847Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/artifactregistry.googleapis.com [omitted]
+[warn] !  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2024-07-06T14:43:57.848Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2024-07-06T14:43:57.849Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/artifactregistry.googleapis.com:enable x-goog-quota-user=projects/otp-project-bcef9
+[debug] [2024-07-06T14:43:57.879Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/runtimeconfig.googleapis.com 200
+[debug] [2024-07-06T14:43:57.880Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-07-06T14:43:57.898Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/cloudbuild.googleapis.com 200
+[debug] [2024-07-06T14:43:57.898Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/cloudbuild.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2024-07-06T14:43:57.900Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2024-07-06T14:43:57.900Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/cloudbuild.googleapis.com:enable x-goog-quota-user=projects/otp-project-bcef9
+[debug] [2024-07-06T14:43:57.909Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/cloudfunctions.googleapis.com 200
+[debug] [2024-07-06T14:43:57.909Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-07-06T14:43:58.414Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/artifactregistry.googleapis.com:enable 400
+[debug] [2024-07-06T14:43:58.415Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2024-07-06T14:43:59.844Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/cloudbuild.googleapis.com:enable 400
+[debug] [2024-07-06T14:43:59.845Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/otp-project-bcef9/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2024-07-06T14:44:03.436Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\harsh\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:268:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
